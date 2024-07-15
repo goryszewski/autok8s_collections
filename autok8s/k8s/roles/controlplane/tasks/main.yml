@@ -1,0 +1,3 @@
+- import_tasks: 01_software.yml
+- import_tasks: 02_kubeconfig.yml
+- import_tasks: 03_kube_service.yml
