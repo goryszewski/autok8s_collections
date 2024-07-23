@@ -11,4 +11,3 @@
     name: target
     enabled: true
     daemon_reload: true
-
