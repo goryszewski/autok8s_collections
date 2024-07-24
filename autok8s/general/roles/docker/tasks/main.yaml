@@ -31,6 +31,9 @@
     - Restart-systemd
     - Restart-service-docker
 
+- name: Force all notified handlers to run at this point, not waiting for normal sync points 1
+  ansible.builtin.meta: flush_handlers
+
 - name: Enable local api http
   ansible.builtin.lineinfile:
     path: /lib/systemd/system/docker.service
@@ -39,3 +42,6 @@
   notify:
     - Restart-systemd
     - Restart-service-docker
+
+- name: Force all notified handlers to run at this point, not waiting for normal sync points 2
+  ansible.builtin.meta: flush_handlers
