@@ -1,2 +1,5 @@
 ---
 # defaults file for etcd
+etcd_folder_data: /var/lib/etcd
+
+etcd_folder_config: /etc/etcd

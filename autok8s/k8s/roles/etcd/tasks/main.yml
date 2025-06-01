@@ -23,17 +23,17 @@
    - etcdctl
    - etcd
 
-- name: Creates directory /var/lib/etcd
+- name: "Creates directory {{ etcd_folder_data }}"
   file:
-    path: /var/lib/etcd
+    path: "{{ etcd_folder_data }}"
     state: directory
     owner: root
     group: root
     mode: '0700'
 
-- name: Creates directory /etc/etcd
+- name: "Creates directory {{ etcd_folder_config }}"
   file:
-    path: /etc/etcd
+    path: "{{ etcd_folder_config }}"
     state: directory
     owner: root
     group: root

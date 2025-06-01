@@ -1,0 +1,2 @@
+etcd_url_download: "https://github.com/etcd-io/etcd/releases/download/{{etcd['version']}}/etcd-{{etcd['version']}}-{{etcd['platform']}}.tar.gz"
+etcd_checksum: "sha256:https://github.com/etcd-io/etcd/releases/download/{{etcd['version']}}/SHA256SUMS"

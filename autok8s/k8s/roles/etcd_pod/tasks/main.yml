@@ -1,10 +1,10 @@
 ---
 - name: "[ETCD POD] - Download etcd"
   ansible.builtin.get_url:
-    url: "https://github.com/etcd-io/etcd/releases/download/{{etcd['version']}}/etcd-{{etcd['version']}}-{{etcd['platform']}}.tar.gz"
+    url: "{{ etcd_url_download }}"
     dest: /tmp
     mode: 'u=rwx,g=rx,o=rx'
-    checksum: sha256:https://github.com/etcd-io/etcd/releases/download/{{etcd['version']}}/SHA256SUMS
+    checksum: "{{ etcd_checksum }}"
 
 - name: "[ETCD POD] - unarchive etcd"
   ansible.builtin.unarchive:
